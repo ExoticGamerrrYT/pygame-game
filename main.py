@@ -1,29 +1,7 @@
-import pygame
+from pygame import *
 
-# Initialize Pygame
-pygame.init()
+window = display.set_mode((700, 500))
+display.set_caption("Caught")
+background = transform.scale(image.load("images/08-05-23 19.png"), (700, 500))
 
-# Define the window size
-width = 800
-height = 600
-
-# Create the window
-window = pygame.display.set_mode((width, height))
-
-# Set the window title
-pygame.display.set_caption("My Pygame Window")
-
-# Main game loop
-running = True
-while running:
-    # Event handling
-    for event in pygame.event.get():
-        # Check if the window has been closed
-        if event.type == pygame.QUIT:
-            running = False
-
-    # Update the window
-    pygame.display.update()
-
-# Quit Pygame
-pygame.quit()
+window.blit(background, (0, 0))
